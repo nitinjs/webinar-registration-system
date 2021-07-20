@@ -1,0 +1,982 @@
+[
+  {
+    "Section": "Inspection Overview",
+    "Question": "JOB #",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text1"
+    ]
+  },
+  {
+    "Section": "Inspection Overview",
+    "Question": "INTERNAL USE ONLY",
+    "QuestionType": "MultilineTextBox",
+    "References": [
+      "Text2"
+    ]
+  },
+  {
+    "Section": "Client Info",
+    "Question": "Client Name",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text3"
+    ]
+  },
+  {
+    "Section": "Client Info",
+    "Question": "Different from Owner ?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box1",
+      "Check Box2"
+    ]
+  },
+  {
+    "Section": "Client Info",
+    "Question": "Street Address",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text5"
+    ]
+  },
+  {
+    "Section": "Client Info",
+    "Question": "City",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text7"
+    ]
+  },
+  {
+    "Section": "Client Info",
+    "Question": "State",
+    "QuestionType": "SmallTextBox",
+    "References": [
+      "Text8"
+    ]
+  },
+  {
+    "Section": "Client Info",
+    "Question": "Zip Code",
+    "QuestionType": "SmallTextBox",
+    "References": [
+      "Text9"
+    ]
+  },
+  {
+    "Section": "Contact Method",
+    "Question": "Home",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text13"
+    ]
+  },
+  {
+    "Section": "Contact Method",
+    "Question": "Work",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text14"
+    ]
+  },
+  {
+    "Section": "Contact Method",
+    "Question": "Fax",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text15"
+    ]
+  },
+  {
+    "Section": "Contact Method",
+    "Question": "Email",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text16"
+    ]
+  },
+  {
+    "Section": "Onsite System Location",
+    "Question": "Inspector Name",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text4"
+    ]
+  },
+  {
+    "Section": "Onsite System Location",
+    "Question": "Date",
+    "QuestionType": "Date",
+    "References": [
+      "Text6"
+    ]
+  },
+  {
+    "Section": "Onsite System Location",
+    "Question": "ISSDS Address (including municipality)",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text10"
+    ]
+  },
+  {
+    "Section": "Onsite System Location",
+    "Question": "Municipal Coordinates Block",
+    "QuestionType": "SmallTextBox",
+    "References": [
+      "Text17"
+    ]
+  },
+  {
+    "Section": "Onsite System Location",
+    "Question": "Municipal Coordinates Lot",
+    "QuestionType": "SmallTextBox",
+    "References": [
+      "Text18"
+    ]
+  },
+  {
+    "Section": "Onsite System Location",
+    "Question": "Was GPS used?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box3",
+      "Check Box4"
+    ]
+  },
+  {
+    "Section": "Preliminary Information",
+    "Question": "Weather",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text19"
+    ]
+  },
+  {
+    "Section": "Preliminary Information",
+    "Question": "Last Precipitation",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text20"
+    ]
+  },
+  {
+    "Section": "Preliminary Information",
+    "Question": "Age of system",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text21"
+    ]
+  },
+  {
+    "Section": "Preliminary Information",
+    "Question": "Age of system(units)",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text21"
+    ]
+  },
+  {
+    "Section": "Preliminary Information",
+    "Question": "Number of bedrooms",
+    "QuestionType": "SmallTextBox",
+    "References": [
+      "Text25"
+    ]
+  },
+  {
+    "Section": "Preliminary Information",
+    "Question": "How many systems are being inspected?",
+    "QuestionType": "SmallTextBox",
+    "References": [
+      "Text26"
+    ]
+  },
+  {
+    "Section": "Preliminary Information",
+    "Question": "Type of dwelling?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Residential",
+    "Answer2": "Non Residential",
+    "References": [
+      "Check Box23",
+      "Check Box24"
+    ]
+  },
+  {
+    "Section": "Preliminary Information",
+    "Question": "List any commercial activities or high impact hobbies",
+    "QuestionType": "MultilineTextBox",
+    "References": [
+      "Text24"
+    ]
+  },
+  {
+    "Section": "Preliminary Information",
+    "Question": "Other Comments",
+    "QuestionType": "MultilineTextBox",
+    "References": [
+      "Text29"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Is there a site plan or septic map available ?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box5",
+      "Check Box6"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Is the dwelling currently being occupied?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box7",
+      "Check Box8"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "If so how many occupants?",
+    "QuestionType": "SmallTextBox",
+    "References": [
+      "Text22"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "If no, last date occupied?",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text23"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Is there is a washing machine?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box9",
+      "Check Box10"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Is the dwelling free of additional gray water systems?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box11",
+      "Check Box14"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Is the dwelling free of sump pump and dishwasher discharges to the system?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box15",
+      "Check Box16"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Is the dwelling free of a garbage disposal systems?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box17",
+      "Check Box18"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Is the dwelling free of any historical sewage backups into the structure?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box19",
+      "Check Box20"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Does all sewage enter the septic system and no type of sewage bypass exits?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box21",
+      "Check Box22"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Is the septic tank pumped regularly?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box25",
+      "Check Box26"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Frequency",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text27"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Frequency(units)",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text27"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Last pumping",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text28"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Was file review completed prior to inspection?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box27",
+      "Check Box28"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Main tank lid opened for inspection?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box38",
+      "Check Box39"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Liquid level below the tank's inlet invert?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box41",
+      "Check Box40"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Liquid level below the tank's outlet invert?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box44",
+      "Check Box45"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Treatment tank pumped for this inspection?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box43",
+      "Check Box42"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Are all portions of the tank(s) clear of structures like a deck or a drive way?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box54",
+      "Check Box55"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Does water flow unimpeded from the treatment tank?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box53",
+      "Check Box52"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Is an effluent filter a part of the system?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box50",
+      "Check Box51"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Is the area clear of evidence that sewage has surfaced above the treatment tank?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box56",
+      "Check Box57"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "If yes, does it appear properly maintained?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box48",
+      "Check Box49"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Are there any other type of accessory units present?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box47",
+      "Check Box46"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Depth to top of tank: in",
+    "QuestionType": "SmallTextBox",
+    "References": [
+      "Text35"
+    ]
+  },
+  {
+    "Section": "Septic Tank Information",
+    "Question": "Depth to top of tank access: in",
+    "QuestionType": "SmallTextBox",
+    "References": [
+      "Text36"
+    ]
+  },
+  {
+    "Section": "Treatment Tank",
+    "Question": "Type of system being inspected",
+    "QuestionType": "RadioButton",
+    "Answer1": "Cesspool",
+    "Answer2": "Septic Tank",
+    "Answer3": "Gray Water",
+    "Answer4": "Other",
+    "Answer5": "Multi-compartment",
+    "References": [
+      "Check Box29",
+      "Check Box30",
+      "Check Box31",
+      "Check Box32",
+      "Check Box33"
+    ]
+  },
+  {
+    "Section": "Treatment Tank",
+    "Question": "Type of system (if other)",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text31"
+    ]
+  },
+  {
+    "Section": "Treatment Tank",
+    "Question": "compartment # (if multi-compartment)",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text32"
+    ]
+  },
+  {
+    "Section": "Treatment Tank",
+    "Question": "Type of system being inspected",
+    "QuestionType": "RadioButton",
+    "Answer1": "Concrete",
+    "Answer2": "Block",
+    "Answer3": "Steel",
+    "Answer4": "Other",
+    "References": [
+      "Check Box34",
+      "Check Box35",
+      "Check Box36",
+      "Check Box37"
+    ]
+  },
+  {
+    "Section": "Treatment Tank",
+    "Question": "Type of system (if other)",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text33"
+    ]
+  },
+  {
+    "Section": "Treatment Tank",
+    "Question": "Approximate Treatment Tank Volume GAL",
+    "QuestionType": "SmallTextBox",
+    "References": [
+      "Text34"
+    ]
+  },
+  {
+    "Section": "Tank Condition",
+    "Question": "Top and lids",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "Answer3": "N/A",
+    "References": [
+      "Check Box58",
+      "Check Box60",
+      "Check Box61"
+    ]
+  },
+  {
+    "Section": "Tank Condition",
+    "Question": "Inlet baffle",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "Answer3": "N/A",
+    "References": [
+      "Check Box59",
+      "Check Box62",
+      "Check Box63"
+    ]
+  },
+  {
+    "Section": "Tank Condition",
+    "Question": "Outlet baffle",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "Answer3": "N/A",
+    "References": [
+      "Check Box64",
+      "Check Box67",
+      "Check Box68"
+    ]
+  },
+  {
+    "Section": "Tank Condition",
+    "Question": "Cracks or leaks",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "Answer3": "N/A",
+    "References": [
+      "Check Box65",
+      "Check Box66",
+      "Check Box69"
+    ]
+  },
+  {
+    "Section": "Tank Condition",
+    "Question": "Sewage flow from structure",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "Answer3": "N/A",
+    "References": [
+      "Check Box72",
+      "Check Box71",
+      "Check Box70"
+    ]
+  },
+  {
+    "Section": "Absorption Area",
+    "Question": "Name the type of absorption system?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Disposal bed",
+    "Answer2": "Seepage pit",
+    "Answer3": "Cesspool",
+    "Answer4": "Disposal trench",
+    "Answer5": "Mounded",
+    "Answer6": "Other",
+    "References": [
+      "Check Box73",
+      "Check Box74",
+      "Check Box75",
+      "Check Box76",
+      "Check Box77",
+      "Check Box78"
+    ]
+  },
+  {
+    "Section": "Absorption Area",
+    "Question": "Type of absorption system (if other)",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text38"
+    ]
+  },
+  {
+    "Section": "Absorption Area",
+    "Question": "Was the absorption system located?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box79",
+      "Check Box80"
+    ]
+  },
+  {
+    "Section": "Absorption Area",
+    "Question": "If yes how many ?",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text39"
+    ]
+  },
+  {
+    "Section": "Absorption Area",
+    "Question": "Were the inspection ports checked?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "Answer3": "N/A",
+    "References": [
+      "Check Box81",
+      "Check Box82",
+      "Check Box83"
+    ]
+  },
+  {
+    "Section": "Absorption Area",
+    "Question": "Was a separate probe dug in the absorption area to confirm the observations in the inspection ports?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "Answer3": "N/A",
+    "References": [
+      "Check Box84",
+      "Check Box85",
+      "Check Box86"
+    ]
+  },
+  {
+    "Section": "Absorption Area",
+    "Question": "Is the area of the absorption system free of sewage odors?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box87",
+      "Check Box88"
+    ]
+  },
+  {
+    "Section": "Absorption Area",
+    "Question": "Does sewage flow from the treatment tank to the absorption system without flowing back?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "Answer3": "N/A",
+    "References": [
+      "Check Box89",
+      "Check Box90",
+      "Check Box91"
+    ]
+  },
+  {
+    "Section": "Absorption Area",
+    "Question": "Is the area above or near any of the system components free from visible signs of effluent or sewage?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box92",
+      "Check Box93"
+    ]
+  },
+  {
+    "Section": "Absorption Area",
+    "Question": "Are the areas at or near the inlet invert of any absorption area component free from visible signs of sewage or effluent?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box94",
+      "Check Box95"
+    ]
+  },
+  {
+    "Section": "Absorption Area",
+    "Question": "Are areas above or near system components free of lush vegetation?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box96",
+      "Check Box97"
+    ]
+  },
+  {
+    "Section": "Absorption Area",
+    "Question": "If exposed, is the distribution box in satisfactory condition?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "Answer3": "N/A",
+    "References": [
+      "Check Box98",
+      "Check Box99",
+      "Check Box102"
+    ]
+  },
+  {
+    "Section": "Absorption Area",
+    "Question": "If not exposed please explain why not",
+    "QuestionType": "TextBox",
+    "References": [
+      "Text40"
+    ]
+  },
+  {
+    "Section": "Absorption Area",
+    "Question": "Is the area directly over any part of the absorption system free of any evidence of large objects ( cars, pools, etc. )?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "References": [
+      "Check Box100",
+      "Check Box101"
+    ]
+  },
+  {
+    "Section": "Absorption Area",
+    "Question": "Comments",
+    "QuestionType": "MultilineTextBox",
+    "References": [
+      "Text41"
+    ]
+  },
+  {
+    "Section": "Approximate system location sketch"
+  },
+  {
+    "Section": "Summary",
+    "Question": "Condition of treatment tank (s)",
+    "QuestionType": "RadioButton",
+    "Answer1": "Satisfactory",
+    "Answer2": "Satisfactory with concerns",
+    "Answer3": "Unsatisfactory",
+    "Answer4": "Requires additional investigation",
+    "Answer5": "N/A",
+    "References": [
+      "Check Box103",
+      "Check Box110",
+      "Check Box114",
+      "Check Box115",
+      "Check Box119"
+    ]
+  },
+  {
+    "Section": "Summary",
+    "Question": "Condition of the conveyance and pump system (s)",
+    "QuestionType": "RadioButton",
+    "Answer1": "Satisfactory",
+    "Answer2": "Satisfactory with concerns",
+    "Answer3": "Unsatisfactory",
+    "Answer4": "Requires additional investigation",
+    "Answer5": "N/A",
+    "References": [
+      "Check Box104",
+      "Check Box109",
+      "Check Box113",
+      "Check Box116",
+      "Check Box120"
+    ]
+  },
+  {
+    "Section": "Summary",
+    "Question": "Condition of the absorption area (s)",
+    "QuestionType": "RadioButton",
+    "Answer1": "Satisfactory",
+    "Answer2": "Satisfactory with concerns",
+    "Answer3": "Unsatisfactory",
+    "Answer4": "Requires additional investigation",
+    "Answer5": "N/A",
+    "References": [
+      "Check Box105",
+      "Check Box108",
+      "Check Box112",
+      "Check Box117",
+      "Check Box121"
+    ]
+  },
+  {
+    "Section": "Summary",
+    "Question": "Condition of any accessory components",
+    "QuestionType": "RadioButton",
+    "Answer1": "Satisfactory",
+    "Answer2": "Satisfactory with concerns",
+    "Answer3": "Unsatisfactory",
+    "Answer4": "Requires additional investigation",
+    "Answer5": "N/A",
+    "References": [
+      "Check Box106",
+      "Check Box107",
+      "Check Box111",
+      "Check Box118",
+      "Check Box122"
+    ]
+  },
+  {
+    "Section": "Dosing or Pump Tank",
+    "Question": "Does the system contain a pump tank?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "Answer3": "N/A",
+    "References": [
+      "Check Box123",
+      "Check Box130",
+      "Check Box137"
+    ]
+  },
+  {
+    "Section": "Dosing or Pump Tank",
+    "Question": "Do the alarm (s) on the pump work?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "Answer3": "N/A",
+    "References": [
+      "Check Box124",
+      "Check Box131",
+      "Check Box138"
+    ]
+  },
+  {
+    "Section": "Dosing or Pump Tank",
+    "Question": "Is the pump operating?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "Answer3": "N/A",
+    "References": [
+      "Check Box125",
+      "Check Box132",
+      "Check Box139"
+    ]
+  },
+  {
+    "Section": "Dosing or Pump Tank",
+    "Question": "Is the pump elevated above the tank floor?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "Answer3": "N/A",
+    "References": [
+      "Check Box126",
+      "Check Box133",
+      "Check Box140"
+    ]
+  },
+  {
+    "Section": "Dosing or Pump Tank",
+    "Question": "Is the lid in satisfactory condition?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "Answer3": "N/A",
+    "References": [
+      "Check Box129",
+      "Check Box134",
+      "Check Box141"
+    ]
+  },
+  {
+    "Section": "Dosing or Pump Tank",
+    "Question": "Is the tank in satisfactory condition?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "Answer3": "N/A",
+    "References": [
+      "Check Box128",
+      "Check Box135",
+      "Check Box142"
+    ]
+  },
+  {
+    "Section": "Dosing or Pump Tank",
+    "Question": "Is the tank free of accumulated solids?",
+    "QuestionType": "RadioButton",
+    "Answer1": "Yes",
+    "Answer2": "No",
+    "Answer3": "N/A",
+    "References": [
+      "Check Box127",
+      "Check Box136",
+      "Check Box143"
+    ]
+  },
+  {
+    "Section": "Septic Inspection Comments",
+    "Question": "Comments",
+    "QuestionType": "MultilineTextBox",
+    "References": [
+      "Text42"
+    ]
+  },
+  {
+    "Section": "Septic System Inspection Images"
+  },
+  {
+    "Section": "Image Notes",
+    "Question": "Notes",
+    "QuestionType": "MultilineTextBox",
+    "References": [
+      "txtImageNotes"
+    ]
+  }
+]

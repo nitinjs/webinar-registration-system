@@ -1,0 +1,84 @@
+﻿@using TalkBack.Web.Startup
+@using TalkBack.Webinars.Dto
+@model ProjectDto
+@{ ViewBag.Title = "Create New Project";
+    ViewBag.CurrentPageName = PageNames.Projects; }
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-12">
+                <h1 class="m-0 text-dark">Create New Project</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 form-sec">
+                <form method="post" id="frmAddProject">
+                    <div class="form-group">
+                        <label>Name:</label>
+                        @Html.TextBoxFor(x => x.Name, new { @class = "form-control", placeholder = "Enter name of the project", required="required", minlength="3" })
+                    </div>
+                    <div class="form-group">
+                        <label>Description:</label>
+                        @Html.TextAreaFor(x => x.Description, new { @class = "form-control", placeholder = "Enter description", rows = "6" })
+                    </div>
+                    <button type="submit" class="btn btn-success">Add</button>
+                    &nbsp;&nbsp;
+                    <button type="button" class="btn btn-default" onclick="document.location='@Url.Action("Index", "Home")'">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+@section styles{
+    <style type="text/css">
+        .form-sec {
+            padding: 15px;
+            background: #f8f9fa;
+            box-shadow: 0 0 4px #ccc;
+        }
+    </style>
+}
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var validator = $("#frmAddProject").validate({
+                rules: {
+                    Name: "required"
+                },
+                messages: {
+                    Name: {
+                        required: "Enter project name",
+                        minlength: jQuery.validator.format("Enter at least {0} characters"),
+                        remote: jQuery.validator.format("{0} is already in use")
+                    }
+                },
+                // the errorPlacement has to take the table layout into account
+                errorPlacement: function (error, element) {
+                    if (element.is(":radio"))
+                        error.appendTo(element.parent().next().next());
+                    else if (element.is(":checkbox"))
+                        error.appendTo(element.next());
+                    else
+                        error.appendTo(element.parent());
+                },
+                // specifying a submitHandler prevents the default submit, good for the demo
+                submitHandler: function () {
+                    return true;
+                },
+                // set this class to error-labels to indicate valid fields
+                success: function (label) {
+                    // set &nbsp; as text for IE
+                    label.html("&nbsp;").addClass("checked");
+                },
+                highlight: function (element, errorClass) {
+                    $(element).parent().next().find("." + errorClass).removeClass("checked");
+                }
+            });
+        });
+    </script>
+}

@@ -1,0 +1,101 @@
+
+/*-------------------------inbound css-------------------------------*/
+
+
+.table th, .table td{
+    padding: 0.1rem !important;
+    border-radius: 0px !important;
+    border-style: none !important;
+}
+
+.table input{
+    padding: 0;
+    border-radius: 0px !important;
+}
+
+.table label{
+    font-size: 12px;
+}
+
+.mb5 {
+	margin-bottom: 80px;
+	margin-top: 80px;
+}
+
+.footer .row {
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+/*add*/
+button.btn.btn-danger {
+    padding: 10px;
+    box-shadow: 3px 3px 1px #980000;
+    border-radius: 0px;
+}
+
+
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+section.discover .col-lg-5 img {
+    width: 350px;
+    margin-bottom: -0px;
+}
+
+section.discover {
+    border: 1px solid #ccc;
+    margin-top: 80px;
+}
+
+
+.col-lg-5 {
+    margin-top: -98px;
+}
+
+
+
+
+
+@media (max-width: 576px ) {
+	
+section.discover .col-lg-5 img {
+    width: auto;
+    text-align: center;
+    margin: 10px auto;
+    display: block;
+}
+
+.what {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 !important;
+}
+
+.what span {
+    float: none;
+    text-align: center;
+    padding: 15px !important;
+    margin: 0 auto;
+    display: inline-block;
+    width: 100%;
+}
+
+.footer .row span {
+    float: none !important;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+.col-lg-10.mx-auto span {
+    margin-bottom: 50px !important;
+}
+
+}

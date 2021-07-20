@@ -1,0 +1,378 @@
+﻿@using WMS.Web.Startup
+@using WMS.Users.Dto
+@model UserDto
+@{ ViewBag.Title = "Webinar Payment";
+    Layout = "~/Views/Shared/Layout/_BlankLayout.cshtml";
+    ViewBag.CurrentPageName = PageNames.Projects; }
+<div class="card">
+    <div class="card-top border-bottom text-center"> <a href="#"><i class="fa fa-long-arrow-alt-left"></i> Back to webinar details</a> <span id="logo">Webinar Payment</span> </div>
+    <div class="card-body">
+        @using (Html.BeginForm("Pay", "Payment", FormMethod.Post, new { id = "paymentform" }))
+        {
+<div class="row upper">
+    <span><span id="three">1</span> Webinar details</span>
+    <span><span id="three">2</span> Contact details</span>
+    <span id="payment"><span id="three">3</span>Payment</span>
+</div>
+                <div class="row">
+                    <div class="col-md-7">
+                        @Html.AntiForgeryToken()
+                        @Html.Hidden("uid", Model.Id)
+                        @Html.Hidden("webinarid", Convert.ToString(ViewBag.WebinarId), new { })
+                        <div class="left border">
+                            <div class="row">
+                                <span class="header">Payment</span>
+                                <div class="icons"> <img src="https://img.icons8.com/color/48/000000/visa.png" /> <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" /> <img src="https://img.icons8.com/color/48/000000/maestro.png" /> </div>
+                            </div>
+
+                            <span>Cardholder's name:</span>
+                            <input placeholder="Linda Williams" type="text" class="form-control" name="CardName" />
+
+                            <span>Card Number:</span>
+                            <input type="tel"
+                                   class="form-control"
+                                   name="cardNumber"
+                                   placeholder="Valid Card Number"
+                                   autocomplete="cc-number"
+                                   required autofocus />
+                            <div class="row">
+                                <div class="col-4">
+                                    <span>Expiry date:</span>
+                                    <input type="tel"
+                                           class="form-control"
+                                           name="cardExpiry"
+                                           placeholder="MM / YYYY"
+                                           autocomplete="cc-exp"
+                                           required />
+                                </div>
+                                <div class="col-4">
+                                    <span>CVV:</span> <input type="tel"
+                                                             class="form-control"
+                                                             name="cardCVC"
+                                                             placeholder="CVC"
+                                                             autocomplete="cc-csc"
+                                                             required />
+                                </div>
+                            </div> @*<input type="checkbox" id="save_card" class="align-left"> <label for="save_card">Save card details to wallet</label>*@
+                            @if (!string.IsNullOrWhiteSpace(ViewBag.Errors))
+                            {
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="payment-errors">
+                        @ViewBag.Errors
+                    </p>
+                </div>
+            </div>}
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="right border">
+                            <div class="header">Order Summary</div>
+                            <p>1 item</p>
+                            <div class="row item">
+                                <div class="col-4 align-self-center"><img class="img-fluid" src="/img/Webinar.png"></div>
+                                <div class="col-8">
+                                    <div class="row"><b>$ @ViewBag.Fee</b></div>
+                                    <div class="row text-muted">Webinar</div>
+                                    <div class="row">Qty:1</div>
+                                </div>
+                            </div>
+                            @*<div class="row item">
+                                    <div class="col-4 align-self-center"><img class="img-fluid" src="https://i.imgur.com/Ew8NzKr.jpg"></div>
+                                    <div class="col-8">
+                                        <div class="row"><b>$ 19.99</b></div>
+                                        <div class="row text-muted">Be Legandary Lipstick-Sheer Navy Cream</div>
+                                        <div class="row">Qty:1</div>
+                                    </div>
+                                </div>*@
+                            <hr>
+                            <div class="row lower">
+                                <div class="col text-left">Subtotal</div>
+                                <div class="col text-right">$ @ViewBag.Fee</div>
+                            </div>
+                            <div class="row lower">
+                                <div class="col text-left">Covenience fee</div>
+                                <div class="col text-right">Free</div>
+                            </div>
+                            <div class="row lower">
+                                <div class="col text-left"><b>Total to pay</b></div>
+                                <div class="col text-right"><b>$ @ViewBag.Fee</b></div>
+                            </div>
+                            @*<div class="row lower">
+                                    <div class="col text-left"><a href="#"><u>Add promo code</u></a></div>
+                                </div>*@ <button type="submit" class="subscribe btn">Confirm Registration</button>
+                            <p class="text-muted text-center">You will recieve email containing the webinar joining details</p>
+                        </div>
+                    </div>
+                </div>}
+    </div>
+    <div> </div>
+</div>
+@section styles{
+    <style type="text/css">
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(0, 0, 34);
+            font-size: 0.8rem
+        }
+
+        .card {
+            max-width: 1000px;
+            margin: 2vh
+        }
+
+        .card-top {
+            padding: 0.7rem 5rem
+        }
+
+            .card-top a {
+                float: left;
+                margin-top: 0.7rem
+            }
+
+    #logo { font-family: 'Calibri'; font-weight: bold; font-size: 1.6rem }
+
+        .card-body {
+            padding: 0 5rem 5rem 5rem;
+            background-image: url("https://i.imgur.com/4bg1e6u.jpg");
+            background-size: cover;
+            background-repeat: no-repeat
+        }
+
+        @@media(max-width:768px) {
+            .card-body {
+                padding: 0 1rem 1rem 1rem;
+                background-image: url("https://i.imgur.com/4bg1e6u.jpg");
+                background-size: cover;
+                background-repeat: no-repeat
+            }
+
+            .card-top {
+                padding: 0.7rem 1rem
+            }
+        }
+
+        .row {
+            margin: 0
+        }
+
+        .upper {
+            padding: 1rem 0;
+            justify-content: space-evenly
+        }
+
+        #three {
+            border-radius: 1rem;
+            width: 22px;
+            height: 22px;
+            margin-right: 3px;
+            border: 1px solid blue;
+            text-align: center;
+            display: inline-block
+        }
+
+        #payment {
+            margin: 0;
+            color: blue
+        }
+
+        .icons {
+            margin-left: auto
+        }
+
+        form span {
+            color: #212529;
+        }
+
+        form {
+            padding: 2vh 0
+        }
+
+        input {
+            border: 1px solid rgba(0, 0, 0, 0.137);
+            padding: 1vh;
+            margin-bottom: 4vh;
+            outline: none;
+            width: 100%;
+            background-color: rgb(247, 247, 247)
+        }
+
+            input:focus::-webkit-input-placeholder {
+                color: transparent
+            }
+
+        .header {
+            font-size: 1.5rem
+        }
+
+        .left {
+            background-color: #ffffff;
+            padding: 2vh
+        }
+
+            .left img {
+                width: 2rem
+            }
+
+            .left .col-4 {
+                padding-left: 0
+            }
+
+        .right .item {
+            padding: 0.3rem 0
+        }
+
+        .right {
+            background-color: #ffffff;
+            padding: 2vh
+        }
+
+        .col-8 {
+            padding: 0 1vh
+        }
+
+        .lower {
+            line-height: 2
+        }
+
+        .btn {
+            background-color: rgb(23, 4, 189);
+            border-color: rgb(23, 4, 189);
+            color: white;
+            width: 100%;
+            font-size: 0.7rem;
+            margin: 4vh 0 1.5vh 0;
+            padding: 1.5vh;
+            border-radius: 0
+        }
+
+            .btn:focus {
+                box-shadow: none;
+                outline: none;
+                box-shadow: none;
+                color: white;
+                -webkit-box-shadow: none;
+                -webkit-user-select: none;
+                transition: none
+            }
+
+            .btn:hover {
+                color: white
+            }
+
+        a {
+            color: black
+        }
+
+            a:hover {
+                color: black;
+                text-decoration: none
+            }
+
+        input[type=checkbox] {
+            width: unset;
+            margin-bottom: unset
+        }
+
+        #cvv {
+            background-image: linear-gradient(to left, rgba(255, 255, 255, 0.575), rgba(255, 255, 255, 0.541)), url("https://img.icons8.com/material-outlined/24/000000/help.png");
+            background-repeat: no-repeat;
+            background-position-x: 95%;
+            background-position-y: center
+        }
+
+            #cvv:hover {
+            }
+    </style>
+}
+@section scripts
+{
+
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.payment/1.2.3/jquery.payment.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /* If you're using Stripe for payments */
+            function payWithStripe(e) {
+
+                /* Abort if invalid form data */
+                if (!validator.form()) {
+                    return;
+                }
+                e.preventDefault();
+
+                /* Visual feedback */
+                $form.find('.subscribe').html('Validating <i class="fa fa-spinner fa-pulse"></i>').prop('disabled', true);
+                $form.submit();
+            }
+            var $form = $('#paymentform');
+            $form.find('.subscribe').on('click', payWithStripe);
+            /* Fancy restrictive input formatting via jQuery.payment library*/
+            $('input[name=cardNumber]').payment('formatCardNumber');
+            $('input[name=cardCVC]').payment('formatCardCVC');
+            $('input[name=cardExpiry').payment('formatCardExpiry');
+
+            /* Form validation using Stripe client-side validation helpers */
+            jQuery.validator.addMethod("cardNumber", function (value, element) {
+                return this.optional(element) || Stripe.card.validateCardNumber(value);
+            }, "Please specify a valid credit card number.");
+
+            jQuery.validator.addMethod("cardExpiry", function (value, element) {
+                /* Parsing month/year uses jQuery.payment library */
+                value = $.payment.cardExpiryVal(value);
+                return this.optional(element) || Stripe.card.validateExpiry(value.month, value.year);
+            }, "Invalid expiration date.");
+
+            jQuery.validator.addMethod("cardCVC", function (value, element) {
+                return this.optional(element) || Stripe.card.validateCVC(value);
+            }, "Invalid CVC.");
+
+            validator = $form.validate({
+                rules: {
+                    cardNumber: {
+                        required: true,
+                        cardNumber: true
+                    },
+                    cardExpiry: {
+                        required: true,
+                        cardExpiry: true
+                    },
+                    cardCVC: {
+                        required: true,
+                        cardCVC: true
+                    }
+                },
+                highlight: function (element) {
+                    $(element).closest('.form-control').removeClass('success').addClass('error');
+                },
+                unhighlight: function (element) {
+                    $(element).closest('.form-control').removeClass('error').addClass('success');
+                },
+                errorPlacement: function (error, element) {
+                    $(element).closest('.form-group').append(error);
+                }
+            });
+
+            var paymentFormReady = function () {
+                if ($form.find('[name=cardNumber]').hasClass("success") &&
+                    $form.find('[name=cardExpiry]').hasClass("success") &&
+                    $form.find('[name=cardCVC]').val().length > 1) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            $form.find('.subscribe').prop('disabled', true);
+            var readyInterval = setInterval(function () {
+                if (paymentFormReady()) {
+                    $form.find('.subscribe').prop('disabled', false);
+                    clearInterval(readyInterval);
+                }
+            }, 250);
+        });
+    </script>
+}

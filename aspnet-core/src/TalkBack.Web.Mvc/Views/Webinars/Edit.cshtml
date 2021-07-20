@@ -1,0 +1,379 @@
+﻿@using TalkBack.Web.Startup
+@using TalkBack.Webinars.Dto
+@using TalkBack.Web.Models
+@model WebinarEditDto
+@{ ViewBag.Title = "Edit Webinar details";
+    ViewBag.CurrentPageName = PageNames.Projects; }
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-12">
+                <h1 class="m-0 text-dark">@ViewBag.Title</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<form method="post" id="frmAddProject">
+    <section class="">
+        <div class="container-fluid">
+            <div class="row form-sec">
+                <div class="col-md-6">
+                    @Html.HiddenFor(x => x.Id)
+                    @Html.HiddenFor(x => x.ProjectId)
+                    <div class="form-group">
+                        <label>Name:</label>
+                        @Html.TextBoxFor(x => x.Name, new { @class = "form-control", placeholder = "Enter name of the webinar", required = "required", minlength = "3" })
+                    </div>
+                    <div class="form-group">
+                        <label>Headline:</label>
+                        @Html.TextBoxFor(x => x.Headline, new { @class = "form-control", placeholder = "Enter headline" })
+                    </div>
+                    <div class="form-group">
+                        <label>Sub-Headline:</label>
+                        @Html.TextAreaFor(x => x.SubHeadline, new { @class = "form-control", placeholder = "Enter sub-headline", rows = "3" })
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Video URL:</label>
+                        @Html.TextBoxFor(x => x.VideoURL, new { @class = "form-control", placeholder = "Enter video URL" })
+                    </div>
+                    <div class="form-group">
+                        <label>Cost:</label>
+                        @Html.TextBoxFor(x => x.Cost, new { @class = "form-control", placeholder = "Enter cost", style = "width:166px" })
+                    </div>
+                    <div class="form-group">
+                        <label>Webinar Joining Details:</label>
+                        @Html.TextAreaFor(x => x.JoiningDetails, new { @class = "form-control", placeholder = "Enter webinar joining details", rows = "3" })
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Benefits:</label>
+                        <div>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="clearBenefitTextBox();">Add Benefit</button><br /><br />
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="width:80px">
+                                            ID
+                                        </th>
+                                        <th>
+                                            Name
+                                        </th>
+                                        <th>
+                                            Description
+                                        </th>
+                                        <th style="width:80px">
+                                            Action
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbody">
+                                </tbody>
+                            </table>
+
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            @*<button type="button" class="close" data-dissmiss="modal"><span aria-hidden="true">&times;</span></button>*@
+                                            <h4 class="modal-title" id="myModalLabel">Benefit Editor</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body form-sec">
+                                            <div>
+                                                <div class="form-group" style="display:none">
+                                                    <label for="BenefitId">ID</label>
+                                                    <input type="text" class="form-control" id="BenefitID" placeholder="Id" disabled="disabled" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="BenefitName">Benefit Heading</label>
+                                                    <input type="text" class="form-control" id="BenefitName" placeholder="Name" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="Description">Description</label>
+                                                    <textarea type="text" class="form-control" id="Description" placeholder="Description" rows="5"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" id="btnAdd" onclick="return AddBenefit();">Add</button>
+                                            <button type="button" class="btn btn-primary" id="btnUpdate" style="display:none;" onclick="UpdateBenefit();">Update</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Speaker Profiles:</label>
+                        <div>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalSP" onclick="clearSpeakerProfileTextBox();">Add Speaker Profile</button><br /><br />
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="width:80px">
+                                            ID
+                                        </th>
+                                        <th style="width:60px">
+                                            Photo
+                                        </th>
+                                        <th>
+                                            Speaker Name
+                                        </th>
+                                        <th>
+                                            Website
+                                        </th>
+                                        <th>
+                                            Description
+                                        </th>
+                                        <th style="width:80px">
+                                            Action
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbodySP">
+                                </tbody>
+                            </table>
+
+                            <div class="modal fade" id="myModalSP" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            @*<button type="button" class="close" data-dissmiss="modal"><span aria-hidden="true">&times;</span></button>*@
+                                            <h4 class="modal-title" id="myModalLabel">Speaker Profile Editor</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body form-sec">
+                                            <div>
+                                                <div class="form-group" style="display:none">
+                                                    <label for="SpeakerProfileID">ID</label>
+                                                    <input type="text" class="form-control" id="SpeakerProfileID" placeholder="Id" disabled="disabled" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="SpeakerProfileName">Speaker Name</label>
+                                                    <input type="text" class="form-control" id="SpeakerProfileName" placeholder="Speaker Name" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="SpeakerProfileWebsite">Website</label>
+                                                    <input type="text" class="form-control" id="SpeakerProfileWebsite" placeholder="Website" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="SpeakerProfilePhoto">Photo</label>
+                                                    <br />
+                                                    <img style="width:100px;padding:5px" id="imgPhoto" src="/img/man.png" />
+                                                    <input type="file" class="form-control" id="SpeakerProfilePhoto" placeholder="Photo" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="SpeakerProfileDescription">Description</label>
+                                                    <textarea type="text" class="form-control" id="SpeakerProfileDescription" placeholder="Description" rows="5"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" id="btnAddSpeakerProfile" onclick="return AddSpeakerProfile();">Add</button>
+                                            <button type="button" class="btn btn-primary" id="btnUpdateSpeakerProfile" style="display:none;" onclick="UpdateSpeakerProfile();">Update</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Testimonials:</label>
+                        <div>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalTM" onclick="clearTestimonialTextBox();">Add Testimonial</button><br /><br />
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="width:80px">
+                                            ID
+                                        </th>
+                                        <th style="width:60px">
+                                            Photo
+                                        </th>
+                                        <th>
+                                            Reviewer Name
+                                        </th>
+                                        <th>
+                                            Review
+                                        </th>
+                                        <th style="width:80px">
+                                            Action
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbodyTM">
+                                </tbody>
+                            </table>
+
+                            <div class="modal fade" id="myModalTM" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            @*<button type="button" class="close" data-dissmiss="modal"><span aria-hidden="true">&times;</span></button>*@
+                                            <h4 class="modal-title" id="myModalLabel">Testimonial Editor</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body form-sec">
+                                            <div>
+                                                <div class="form-group" style="display:none">
+                                                    <label for="TestimonialID">ID</label>
+                                                    <input type="text" class="form-control" id="TestimonialID" placeholder="Id" disabled="disabled" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="TestimonialName">Reviewer Name</label>
+                                                    <input type="text" class="form-control" id="TestimonialName" placeholder="Reviewer Name" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="TestimonialPhoto">Photo</label>
+                                                    <br />
+                                                    <img style="width:100px;padding:5px" id="imgPhotoTestimonial" src="/img/man.png" />
+                                                    <input type="file" class="form-control" id="TestimonialPhoto" placeholder="Photo" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="SpeakerProfileDescription">Review</label>
+                                                    <textarea type="text" class="form-control" id="TestimonialDescription" placeholder="Review" rows="5"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="form-row">
+                                                        <div class="col-md-4">
+                                                            <label for="SpeakerProfileWebsite">Likes</label>
+                                                            <input type="text" class="form-control" id="NumberOfLikes" placeholder="Number of Likes" />
+
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="SpeakerProfileWebsite">Reviews</label>
+                                                            <input type="text" class="form-control" id="NumberOfReviews" placeholder="Number of Reviews" />
+
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="SpeakerProfileWebsite">Stars</label>
+                                                            <select class="form-control" id="NumberOfStars" placeholder="Number of Stars">
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                                <option selected>5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" id="btnAddTestimonial" onclick="return AddTestimonial();">Add</button>
+                                            <button type="button" class="btn btn-primary" id="btnUpdateTestimonial" style="display:none;" onclick="UpdateTestimonial();">Update</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Load Design Template:</label>
+                        @Html.DropDownListFor(x => x.SelectedTemplateId, Model.Templates, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Editor:</label>
+                        @Html.TextAreaFor(x => x.DesignHtml, new { @class = "form-control", placeholder = "Enter HTML design", rows = "35" })
+                        <p>Possible placeholders <code><%HEADLINE%></code>, <code><%SUBHEADLINE%></code>, <code><%REGISTER%></code>, <code><%VIDEOURL%></code></p>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success">Save</button>
+                @*&nbsp;&nbsp;
+                    <a target="_blank" class="btn btn-info" href="/Webinars/Preview/@Model.Id">Preview</a>*@
+                &nbsp;&nbsp;
+                <button type="button" class="btn btn-default" onclick="document.location = '/Webinars/Index/@Model.ProjectId'">Cancel</button>
+
+            </div>
+        </div>
+    </section>
+</form>
+@section styles{
+    <style type="text/css">
+        .form-sec {
+            padding: 15px;
+            background: #f8f9fa;
+            box-shadow: 0 0 4px #ccc;
+        }
+    </style>
+}
+@section scripts
+{
+
+    <script src="~/ckeditor/ckeditor.js"></script>
+    <script>
+        var editor;
+        $(document).ready(function () {
+            CKEDITOR.config.height = "600px";
+            editor = CKEDITOR.replace('DesignHtml', {
+                allowedContent: true
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        var webinarId = @Model.Id;
+        $(document).ready(function () {
+            var validator = $("#frmAddProject").validate({
+                rules: {
+                    Name: "required"
+                },
+                messages: {
+                    Name: {
+                        required: "Enter project name",
+                        minlength: jQuery.validator.format("Enter at least {0} characters"),
+                        remote: jQuery.validator.format("{0} is already in use")
+                    }
+                },
+                // the errorPlacement has to take the table layout into account
+                errorPlacement: function (error, element) {
+                    if (element.is(":radio"))
+                        error.appendTo(element.parent().next().next());
+                    else if (element.is(":checkbox"))
+                        error.appendTo(element.next());
+                    else
+                        error.appendTo(element.parent());
+                },
+                // specifying a submitHandler prevents the default submit, good for the demo
+                submitHandler: function () {
+                    return true;
+                },
+                // set this class to error-labels to indicate valid fields
+                success: function (label) {
+                    // set &nbsp; as text for IE
+                    label.html("&nbsp;").addClass("checked");
+                },
+                highlight: function (element, errorClass) {
+                    $(element).parent().next().find("." + errorClass).removeClass("checked");
+                }
+            });
+
+            $("#SelectedTemplateId").change(function () {
+                if ($(this).val() != "0") {
+                    abp.services.app.webinar.getTemplate({ id: $(this).val() }).done(function (result) {
+                        CKEDITOR.instances["DesignHtml"].setData(result.html);
+                    });
+                } else {
+                    CKEDITOR.instances["DesignHtml"].setData("");
+                }
+            });
+        });
+    </script>
+    <script src="~/js/benefits.js"></script>
+    <script src="~/js/speakerprofiles.js"></script>
+    <script src="~/js/testimonials.js"></script>
+}

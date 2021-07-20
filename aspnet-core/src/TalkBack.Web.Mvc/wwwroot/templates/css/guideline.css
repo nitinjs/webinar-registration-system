@@ -1,0 +1,102 @@
+/* Add here all your CSS customizations */
+
+
+
+/*---------------------- guideline css ----------------------------*/
+
+ul.nav.nav-pills li {
+    padding: 0 5px;
+}
+
+ul.nav.nav-pills .fa {
+    color: #6783cc;
+    padding-right: 5px;
+}
+
+h2.text-color-dark.font-weight-bold.text-10.mb-3.appear-animation.animated.fadeInUpShorter.appear-animation-visible {
+    text-transform: capitalize !important;
+    letter-spacing: 0.5px;
+    font-weight: 600 !important;
+}
+
+h2.text-color-dark.font-weight-bold.text-10.mb-3.appear-animation.animated.appear-animation-visible {
+    text-transform: none !important;
+    letter-spacing: 0.5px !important;
+	font-weight: 600 !important;
+}
+
+p.custom-text-color-grey-15 {
+    color: #96a9f5;
+}
+
+.top-heading h3 {
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.form-row .col-sm-6 {
+    margin: 15px 0;
+}
+
+.form-row .col-sm-12 {
+    margin: 0 0 15px 0;
+}
+
+button.btn.btn-primary1 {
+	background: #6266e4;
+    border: none;
+    width: 100%;
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 15px;
+	color:#fff;
+}
+
+button.btn.btn-primary2 {
+    background: transparent;
+    border: none;
+    width: 100%;
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 15px;
+    border: 2px solid #6266e4;
+}
+
+.right-align-contnet input.form-control {
+    padding: 25px 15px;
+}
+
+.header-body.border-top-0.appear-animation.animated.appear-animation-visible {
+    position: absolute !important;
+}
+
+h4.text-color-dark.font-weight-semibold.mb-3 {
+    color: #000000 !important;
+}
+
+#header.header-transparent .header-body:not(.header-border-bottom) {
+    border: none !important;
+}
+
+html .text-color-quaternary, html .text-quaternary {
+    color: #000000 !important;
+}
+
+.social-icons li a {
+    color: #000 !important;
+}
+
+
+
+
+
+@media (min-width: 992px) {
+	
+#header .header-nav.header-nav-links:not(.header-nav-light-text) nav > ul > li > a, #header .header-nav.header-nav-line:not(.header-nav-light-text) nav > ul > li > a {
+    color: #fff !important;
+}
+
+}
+
+

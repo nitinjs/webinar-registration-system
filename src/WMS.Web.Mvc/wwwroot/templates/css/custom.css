@@ -1,0 +1,9 @@
+/* Add here all your CSS customizations */
+
+#header.header-transparent .header-body:not(.header-border-bottom) {
+    border: none !important;
+}
+
+.header-body.border-top-0.appear-animation.animated.fadeIn.appear-animation-visible {
+    position: absolute !important;
+}

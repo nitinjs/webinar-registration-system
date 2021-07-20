@@ -1,0 +1,135 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AFAA0841-BD93-466F-B8F4-FB4EEC86F1FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F10AA149-2626-486E-85BB-9CD5365F3016}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TalkBack.Core", "src\TalkBack.Core\TalkBack.Core.csproj", "{0FA75A5B-AB83-4FD0-B545-279774C01E87}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TalkBack.Application", "src\TalkBack.Application\TalkBack.Application.csproj", "{3870C648-4AEA-4B85-BA3F-F2F63B96136A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TalkBack.Tests", "test\TalkBack.Tests\TalkBack.Tests.csproj", "{0D4C5D00-C144-4213-A007-4B8944113AB1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TalkBack.Migrator", "src\TalkBack.Migrator\TalkBack.Migrator.csproj", "{880B3591-E057-46FE-B525-10BD83828B93}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TalkBack.Web.Host", "src\TalkBack.Web.Host\TalkBack.Web.Host.csproj", "{38E184BD-E874-4633-A947-AED4FDB73F40}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TalkBack.Web.Core", "src\TalkBack.Web.Core\TalkBack.Web.Core.csproj", "{22CFE0D2-8DCA-42D7-AD7D-784C3862493F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TalkBack.EntityFrameworkCore", "src\TalkBack.EntityFrameworkCore\TalkBack.EntityFrameworkCore.csproj", "{E0580562-F8F2-4EBB-B07A-ABFC6F2C314F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TalkBack.Web.Mvc", "src\TalkBack.Web.Mvc\TalkBack.Web.Mvc.csproj", "{92C3462E-0457-4C8A-970C-0778DD55DC22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Public", "Public", "{B94051F5-F23B-4282-8762-42FE6AFD1AF8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Website.ignore", "..\public\Website\Website.ignore.csproj", "{9B0B90CD-22B0-4A77-AB43-EE860E1EF35A}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "wwwroot", "..\public\Website\wwwroot\", "{DF11F125-556A-4592-A5CB-2DF41C6B7544}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54351"
+		Debug.AspNetCompiler.PhysicalPath = "..\public\Website\wwwroot\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54351\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54351"
+		Release.AspNetCompiler.PhysicalPath = "..\public\Website\wwwroot\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54351\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54351"
+	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54351"
+		Debug.AspNetCompiler.PhysicalPath = "..\public\Website\wwwroot\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54351\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54351"
+		Release.AspNetCompiler.PhysicalPath = "..\public\Website\wwwroot\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54351\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54351"
+		SlnRelativePath = "..\public\Website\wwwroot\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FA75A5B-AB83-4FD0-B545-279774C01E87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FA75A5B-AB83-4FD0-B545-279774C01E87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FA75A5B-AB83-4FD0-B545-279774C01E87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FA75A5B-AB83-4FD0-B545-279774C01E87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3870C648-4AEA-4B85-BA3F-F2F63B96136A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3870C648-4AEA-4B85-BA3F-F2F63B96136A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3870C648-4AEA-4B85-BA3F-F2F63B96136A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3870C648-4AEA-4B85-BA3F-F2F63B96136A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D4C5D00-C144-4213-A007-4B8944113AB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D4C5D00-C144-4213-A007-4B8944113AB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D4C5D00-C144-4213-A007-4B8944113AB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D4C5D00-C144-4213-A007-4B8944113AB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{880B3591-E057-46FE-B525-10BD83828B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{880B3591-E057-46FE-B525-10BD83828B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{880B3591-E057-46FE-B525-10BD83828B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{880B3591-E057-46FE-B525-10BD83828B93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38E184BD-E874-4633-A947-AED4FDB73F40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38E184BD-E874-4633-A947-AED4FDB73F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38E184BD-E874-4633-A947-AED4FDB73F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38E184BD-E874-4633-A947-AED4FDB73F40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22CFE0D2-8DCA-42D7-AD7D-784C3862493F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22CFE0D2-8DCA-42D7-AD7D-784C3862493F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22CFE0D2-8DCA-42D7-AD7D-784C3862493F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22CFE0D2-8DCA-42D7-AD7D-784C3862493F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0580562-F8F2-4EBB-B07A-ABFC6F2C314F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0580562-F8F2-4EBB-B07A-ABFC6F2C314F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0580562-F8F2-4EBB-B07A-ABFC6F2C314F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0580562-F8F2-4EBB-B07A-ABFC6F2C314F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92C3462E-0457-4C8A-970C-0778DD55DC22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92C3462E-0457-4C8A-970C-0778DD55DC22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92C3462E-0457-4C8A-970C-0778DD55DC22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92C3462E-0457-4C8A-970C-0778DD55DC22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B0B90CD-22B0-4A77-AB43-EE860E1EF35A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B0B90CD-22B0-4A77-AB43-EE860E1EF35A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B0B90CD-22B0-4A77-AB43-EE860E1EF35A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B0B90CD-22B0-4A77-AB43-EE860E1EF35A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF11F125-556A-4592-A5CB-2DF41C6B7544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF11F125-556A-4592-A5CB-2DF41C6B7544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF11F125-556A-4592-A5CB-2DF41C6B7544}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF11F125-556A-4592-A5CB-2DF41C6B7544}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0FA75A5B-AB83-4FD0-B545-279774C01E87} = {AFAA0841-BD93-466F-B8F4-FB4EEC86F1FC}
+		{3870C648-4AEA-4B85-BA3F-F2F63B96136A} = {AFAA0841-BD93-466F-B8F4-FB4EEC86F1FC}
+		{0D4C5D00-C144-4213-A007-4B8944113AB1} = {F10AA149-2626-486E-85BB-9CD5365F3016}
+		{880B3591-E057-46FE-B525-10BD83828B93} = {AFAA0841-BD93-466F-B8F4-FB4EEC86F1FC}
+		{38E184BD-E874-4633-A947-AED4FDB73F40} = {AFAA0841-BD93-466F-B8F4-FB4EEC86F1FC}
+		{22CFE0D2-8DCA-42D7-AD7D-784C3862493F} = {AFAA0841-BD93-466F-B8F4-FB4EEC86F1FC}
+		{E0580562-F8F2-4EBB-B07A-ABFC6F2C314F} = {AFAA0841-BD93-466F-B8F4-FB4EEC86F1FC}
+		{92C3462E-0457-4C8A-970C-0778DD55DC22} = {AFAA0841-BD93-466F-B8F4-FB4EEC86F1FC}
+		{B94051F5-F23B-4282-8762-42FE6AFD1AF8} = {AFAA0841-BD93-466F-B8F4-FB4EEC86F1FC}
+		{9B0B90CD-22B0-4A77-AB43-EE860E1EF35A} = {B94051F5-F23B-4282-8762-42FE6AFD1AF8}
+		{DF11F125-556A-4592-A5CB-2DF41C6B7544} = {B94051F5-F23B-4282-8762-42FE6AFD1AF8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B242600C-04D5-4057-8A01-783BB7BF4A3B}
+	EndGlobalSection
+EndGlobal

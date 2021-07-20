@@ -1,0 +1,152 @@
+﻿@using TalkBack.Web.Startup
+@using TalkBack.Webinars.Dto
+@{ ViewBag.Title = L("HomePage");
+    ViewBag.CurrentPageName = PageNames.MyWebinars; }
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-12">
+                <h1 class="m-0 text-dark">My Webinars</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <!-- <div class="card-header">
+        <h5 class="card-title">Webinars list</h5>
+    </div>
+    /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table id="StudentTable" class="table table-striped table-bordered" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:26px">Id</th>
+                                            <th style="width:251px">Name</th>
+                                            <th>Joining Details</th>
+                                            <th style="width:166px">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if (ViewBag.Webinars.Items.Count == 0)
+                                        { 
+                                            <tr>
+                                                <td colspan="4">
+                                                    <code>No records found</code>
+                                                </td>
+                                            </tr>
+                                        }
+                                        @foreach (WebinarDto i in ViewBag.Webinars.Items)
+                                        { 
+                                            <tr>
+                                                <td>
+                                                    @i.Id
+                                                </td>
+                                                <td>
+                                                    @i.Name
+                                                </td>
+                                                <td>
+                                                    @i.JoiningDetails
+                                                </td>
+                                                <td>
+                                                    <a alt="Preview" target="_blank" href="@Url.Action("Preview","Webinars")/@i.Id" class="btn btn-sm bg-primary edit-role" data-role-id="@i.Id">
+                                                        <i class="fa fa-eye"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section scripts
+{
+    <environment names="Development">
+    </environment>
+
+    <environment names="Staging,Production">
+    </environment>
+    <script>
+        var Popup, dataTable;
+
+        $(document).ready(function () {
+            var _$table = $("#StudentTable");
+            dataTable = _$table.DataTable({
+                paging: true,
+                serverSide: true,
+                ajax: function (data, callback, settings) {
+                    abp.ui.setBusy(_$table);
+                    abp.services.app.webinar.getWebinarsByUserId({ id: @ViewBag.Id}).done(function (result) {
+                        //var result = r.result;
+                        console.log(result);
+                        callback({
+                            recordsTotal: result.totalCount,
+                            recordsFiltered: result.totalCount,
+                            data: result.items
+                        });
+                    }).always(function () {
+                        abp.ui.clearBusy(_$table);
+                    });
+                },
+                buttons: [
+                    {
+                        name: 'refresh',
+                        text: '<i class="fas fa-redo-alt"></i>',
+                        action: () => dataTable.draw(false)
+                    }
+                ],
+                responsive: {
+                    details: {
+                        type: 'column'
+                    }
+                },
+                language: {
+                    emptyTable: "<code>No <b>webinars</b> found.</code>"
+                },
+                columnDefs: [
+                    {
+                        targets: 0,
+                        data: 'id',
+                        defaultContent: '',
+                    },
+                    {
+                        targets: 1,
+                        data: 'name',
+                        sortable: true
+                    },
+                    {
+                        targets: 2,
+                        data: 'joiningDetails',
+                        sortable: true
+                    },
+                    {
+                        targets: 3,
+                        data: null,
+                        sortable: false,
+                        autoWidth: false,
+                        defaultContent: '',
+                        render: (data, type, row, meta) => {
+                            return [
+                                `   <a alt="Preview" target="_blank" href="@Url.Action("Preview","Webinars")/` + row.id  +`" class="btn btn-sm bg-primary edit-role" data-role-id="` + row.id + `">`,
+                                `       <i class="fas fa-eye"></i>`,
+                                '   </a>'
+                            ].join('');
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+}

@@ -1,0 +1,139 @@
+﻿@using TalkBack.Web.Startup
+@using TalkBack.Webinars.Dto
+@using TalkBack.Web.Models
+@model WebinarEditDto
+@{ ViewBag.Title = "Create New Webinar";
+    ViewBag.CurrentPageName = PageNames.Projects; }
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-12">
+                <h1 class="m-0 text-dark">@ViewBag.Title</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<form method="post" id="frmAddWebinar">
+    <section class="">
+        <div class="container-fluid">
+            <div class="row form-sec">
+                <div class="col-md-6">
+                    @Html.HiddenFor(x => x.ProjectId)
+                    <div class="form-group">
+                        <label>Name:</label>
+                        @Html.TextBoxFor(x => x.Name, new { @class = "form-control", placeholder = "Enter name of the webinar", required = "required", minlength = "3" })
+                    </div>
+                    <div class="form-group">
+                        <label>Headline:</label>
+                        @Html.TextBoxFor(x => x.Headline, new { @class = "form-control", placeholder = "Enter headline" })
+                    </div>
+                    <div class="form-group">
+                        <label>Sub-Headline:</label>
+                        @Html.TextAreaFor(x => x.SubHeadline, new { @class = "form-control", placeholder = "Enter sub-headline", rows = "3" })
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Video URL:</label>
+                        @Html.TextBoxFor(x => x.VideoURL, new { @class = "form-control", placeholder = "Enter video URL" })
+                    </div>
+                    <div class="form-group">
+                        <label>Cost:</label>
+                        @Html.TextBoxFor(x => x.Cost, new { @class = "form-control", placeholder = "Enter cost", style = "width:166px" })
+                    </div>
+                    <div class="form-group">
+                        <label>Webinar Joining Details:</label>
+                        @Html.TextAreaFor(x => x.JoiningDetails, new { @class = "form-control", placeholder = "Enter webinar joining details", rows = "3" })
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Load Design Template:</label>
+                        @Html.DropDownListFor(x => x.SelectedTemplateId, Model.Templates, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Editor:</label>
+                        @Html.TextAreaFor(x => x.DesignHtml, new { @class = "form-control", placeholder = "Enter video URL", rows = "35" })
+                        <p>Possible placeholders <code><%HEADLINE%></code>, <code><%SUBHEADLINE%></code>, <code><%REGISTER%></code>, <code><%VIDEOURL%></code></p>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success">Add</button>
+                &nbsp;&nbsp;
+                <button type="button" class="btn btn-default" onclick="document.location='/Webinars/Index/@Model.ProjectId'">Cancel</button>
+
+            </div>
+        </div>
+    </section>
+</form>
+@section styles{
+    <style type="text/css">
+        .form-sec {
+            padding: 15px;
+            background: #f8f9fa;
+            box-shadow: 0 0 4px #ccc;
+        }
+    </style>
+}
+@section scripts
+{
+    <script src="https://cdn.tiny.cloud/1/ubqgtsteueyg5m3g5hbh1v8d2abuh0dicroa6vgp4hok4wys/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#DesignHtml',
+            plugins: [
+                "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker example fullpage",
+                "searchreplace visualblocks visualchars advcode fullscreen insertdatetime media nonbreaking",
+                "save table contextmenu directionality emoticons template paste textcolor wordcount"
+            ]
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var validator = $("#frmAddWebinar").validate({
+                rules: {
+                    Name: "required"
+                },
+                messages: {
+                    Name: {
+                        required: "Enter project name",
+                        minlength: jQuery.validator.format("Enter at least {0} characters"),
+                        remote: jQuery.validator.format("{0} is already in use")
+                    }
+                },
+                // the errorPlacement has to take the table layout into account
+                errorPlacement: function (error, element) {
+                    if (element.is(":radio"))
+                        error.appendTo(element.parent().next().next());
+                    else if (element.is(":checkbox"))
+                        error.appendTo(element.next());
+                    else
+                        error.appendTo(element.parent());
+                },
+                // specifying a submitHandler prevents the default submit, good for the demo
+                submitHandler: function () {
+                    return true;
+                },
+                // set this class to error-labels to indicate valid fields
+                success: function (label) {
+                    // set &nbsp; as text for IE
+                    label.html("&nbsp;").addClass("checked");
+                },
+                highlight: function (element, errorClass) {
+                    $(element).parent().next().find("." + errorClass).removeClass("checked");
+                }
+            });
+
+            $("#SelectedTemplateId").change(function () {
+                if ($(this).val() != "0") {
+                    abp.services.app.webinar.getTemplate({ id: $(this).val() }).done(function (result) {
+                        tinymce.get('DesignHtml').setContent(result.html);
+                    });
+                } else {
+                    tinymce.get('DesignHtml').setContent("");
+                }
+            });
+        });
+    </script>
+}

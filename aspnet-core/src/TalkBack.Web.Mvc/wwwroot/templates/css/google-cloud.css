@@ -1,0 +1,48 @@
+/* Add here all your CSS customizations */
+
+
+
+
+/*----------------------google cloud----------------------------*/
+
+#header.header-transparent .header-body:not(.header-border-bottom) {
+    border: none !important;
+}
+
+.header-body.border-top-0.appear-animation.animated.fadeIn.appear-animation-visible {
+    position: absolute !important;
+}
+
+.custom-bg-color-light-1 {
+    background:url(../img/google/seo-2/background.png) !important;
+    background-size: cover !important;
+}
+
+
+.text-default, .text-color-default {
+    color: #fff !important;
+}
+
+.social-icons li a {
+    color: #fff !important;
+}
+
+#header .header-nav-features .header-nav-top-icon, #header .header-nav-features .header-nav-top-icon-img {
+    color: #fff !important;
+}
+
+.header-body.border-top-0.appear-animation.animated.appear-animation-visible {
+    position: absolute !important;
+}
+
+ul.social-icons.custom-social-icons-style-1 li a {
+    color: #000 !important;
+}
+
+
+@media (min-width: 992px) {
+#header .header-nav.header-nav-links:not(.header-nav-light-text) nav > ul > li > a, #header .header-nav.header-nav-line:not(.header-nav-light-text) nav > ul > li > a {
+    color: #fff !important;
+}
+
+}

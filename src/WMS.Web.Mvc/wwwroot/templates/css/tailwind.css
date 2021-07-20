@@ -1,0 +1,215 @@
+
+
+/*---------------------- tailwind css ----------------------------*/
+
+*{
+	text-decoration:none !important;
+}
+header.head_bg {
+    background: #0792c9;
+    text-align: center;
+    border-bottom: 10px solid;
+    border-image: linear-gradient(37deg,#fc8521,#d54080 60%,#d54080);
+    border-image-slice: 1;
+    padding: 0 0 170px;
+}
+.logo {
+    padding: 15px 0 45px;
+}
+.webnar_contant a {
+    border: 1px solid #fff;
+    border-radius: 25px;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    text-decoration: none !important;
+}
+.webnar_contant p {
+    line-height: normal;
+    margin: 0;
+    padding: 15px 0 0;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.webnar_contant h2 {
+    line-height: 38px;
+    margin: 0;
+    padding: 0 0 15px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+a.second_btn {
+    background: -webkit-linear-gradient(37deg,#fc8521,#d54080 60%,#d54080);
+    display: inline-block;
+    border: none;
+    border-radius: 2px;
+    text-transform: capitalize;
+    font-size: 18px;
+    padding: 7px 50px;
+}
+.video_section {
+    text-align: center;
+    margin: -150px 0 0;
+}
+.insta_training h2 {
+    text-align: center;
+    color: #000;
+    margin: 30px 0 20px;
+}
+.col_text img {
+    height: 17px;
+    margin: 2px 7px 0 0;
+}
+.col_text p {
+    line-height: 20px;
+    color: #000;
+}
+.col_text {
+    display: flex;
+}
+.insta_real {
+    background: #ea5285;
+    margin: 160px 0 0;
+    padding: 0 0 35px;
+}
+.real_box {
+    background: #fff;
+    width: 660px;
+    margin: 0px auto 0;
+    box-shadow: 0px 0px 5px #727272;
+    position: relative;
+    top: -120px;
+    border-radius: 6px;
+    padding: 20px;
+    text-align: center;
+}
+.real_box h3 {
+    color: #000;
+    font-size: 18px;
+}
+.real_box ul {
+    display: table;
+    margin: 18px auto;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+.real_box ul li {
+    padding: 0 15px 0 0;
+    color: #000;
+    float: left;
+}
+.contant_real {
+    text-align: center;
+    width: 500px;
+    margin: -80px auto 0;
+    color: #fff;
+}
+.real_user {
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+}
+.real_user img {
+    float: left;
+    border-radius: 90px;
+    height: 35px;
+    width: 35px;
+    margin: 0 15px 0 0;
+}
+.real_user p {
+    line-height: 18px;
+    margin: 0;
+}
+.real_user {
+    margin: 0 auto;
+    text-align: left;
+    width: 180px;
+}
+.real_user p span {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.insta_expert h4 {
+    padding: 70px 0 0;
+    margin: 0 0 0;
+    color: #000;
+    font-size: 19px;
+}
+.insta_expert h3 {
+    padding: 0 0 0;
+    margin: 0 0 0;
+    color: #000;
+}
+.insta_expert p {
+    padding: 0 0 0;
+    margin: 15px 0 35px;
+    color: #000;
+}
+.hourinsta {
+    background: #0792c9;
+    text-align: center;
+    padding: 50px 0;
+}
+footer#footer {
+    text-align: center;
+    color: #fff;
+}
+footer#footer {
+    text-align: center;
+    color: #fff;
+    background: #212121;
+    padding: 20px 0;
+}
+.insta_img {
+    text-align: left;
+    margin: 30px auto;
+    display: inline-block;
+}
+.insta_img img {
+    float: left;
+    width: 55px;
+    height: 50px;
+    margin: 0 10px 0 0;
+}
+.insta_img p {
+    float: left;
+    margin: 0;
+    line-height: 20px;
+}
+.insta_img p span {
+    font-weight: 700;
+}
+.footer_text p {
+    margin: 0;
+}
+@media (max-width:767px){
+.video_section iframe {
+    width: 100%;
+}
+.real_box {
+    width: 100%;
+}
+.contant_real {
+    width: 100%;
+}
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
+	-ms-flex: 100% !important;
+    flex: 100% !important;
+    max-width: 100% !important;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

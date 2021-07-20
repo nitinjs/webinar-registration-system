@@ -1,0 +1,58 @@
+
+.bg {
+  background-image:url(../img/bg.jpg) !important;
+  width: 100%;
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hre {
+	color: white;
+}
+
+.hre a{
+	color: white !important;
+	text-decoration: none !important;
+}
+
+
+.img11 span {
+    float: left;
+    margin-right: 6px;
+    padding-bottom: 15px;
+
+}
+
+.form-control {
+    border-radius: 0px !important;
+}
+
+.btn {
+	border-radius:0px !important;
+	
+}
+
+.col-lg-5.col-md-5.col-sm-12.custom-right-sidebar {
+    margin-top: 0 !important;
+}
+
+.img11 {
+    clear: both;
+}
+
+.img10 {
+    clear: both;
+}
+
+.img10 span {
+    padding: 0 5px 0 0;
+}
+
+.img11 span {
+    padding: 0 5px 0 0;
+}
+	
+
+/*---------------------------------------------*/
